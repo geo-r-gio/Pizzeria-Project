@@ -16,6 +16,6 @@ The Programmer's Pizzeria is a web application that allows users to create and c
 
 ## Getting Started
 
-To access the Programmer's Pizzeria website, click <a href="index.html" title="Main Page">here</a> and start creating your perfect pizza.
+To access the Programmer's Pizzeria website, click <a href="http://localhost/Pizzeria%20Project/" title="Main Page">here</a> and start creating your perfect pizza.
 
 

@@ -16,5 +16,6 @@ The Programmer's Pizzeria is a web application that allows users to create and c
 
 ## Getting Started
 
+To access the Programmer's Pizzeria website, click <a href="https://<user.name>.github.io/geo-r-gio/index.html" title="Main Page">here</a> and start creating your perfect pizza.
 
 

@@ -1,5 +1,5 @@
 <p align="middle">
-<img src="https://user-images.githubusercontent.com/99130418/242739041-e9e8a733-ca23-4094-a277-59d442948142.png" width="300" height="300" alt="logo" />
+<img src="https://user-images.githubusercontent.com/99130418/242739041-e9e8a733-ca23-4094-a277-59d442948142.png" width="320" height="300" alt="logo" />
 </p>
 
 # Programmer's Pizzeria

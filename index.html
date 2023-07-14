@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pizza Ordering Website</title>
+        <link rel="stylesheet" href="styles.css" />
+
+        <link rel="stylesheet"
+        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <header>
+            <a href="#" class="logo">Programmer's Pizzeria</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+                
+            <ul class="navbar">
+                <li><a href="#home" id="home">Home</a></li>
+                <li><button id="favorites-icon">Favorites</button></li>
+                <li><a href="contact.html">Contact Us</a></li>    
+            </ul>
+
+            <div class="header-action">
+                <div class="dropdown">
+                    <h2>Account <i class='bx bx-chevron-down' ></i></h2>
+                    <div class="dropdown-content">
+                    <a href="login-signup.html">Login/Signup</a>
+                    <a href="address.html">My Address</a>
+                    <a href="payment.html">Payment Methods</a>
+                    </div>
+                  </div>
+    
+                  <i class='bx bx-cart-alt' id="cart-icon"></i>
+            </div>
+
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+
+                <div class="cart-content">
+                    
+                </div>
+
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$0</div>
+                </div>
+
+                <button type="button" class="btn-buy">Buy Now</button>
+
+                <i class='bx bx-x' id="close-cart"></i>
+
+            </div>
+
+            <div class="favorites">
+                <h2 class="favorites-title">Favorites</h2>
+
+                <div class="favorites-content">
+                    
+                </div>
+
+                <i class='bx bx-x' id="close-cart2"></i>
+
+            </div>
+
+        </header>
+
+        <script type="text/javascript" src="main.js"></script>
+        
+        <section class="home" id="home">
+            <div class="home-icon">
+                <img src="images/pizza-icon.png" alt="pizza">
+            </div>
+            <div class="home-text">
+                <!-- <img src="create-pizza.png" alt="create your own pizza"> -->
+                <h1>Create <br> Your own <br> Pizza</h1>
+                <a href="sauce.html" class="btn">Create</a>
+            </div>
+        </section>
+    
+        <!-- <svg id="visual" viewBox="0 0 592 300"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="650" height="300" fill="#ffffff"></rect><path d="M416 300L408.8 287.5C401.7 275 387.3 250 395.8 225C404.3 200 435.7 175 419.8 150C404 125 341 100 308.2 75C275.3 50 272.7 25 271.3 12.5L270 0L650 0L650 12.5C650 25 650 50 650 75C650 100 650 125 650 150C650 175 650 200 650 225C650 250 650 275 650 287.5L650 300Z" fill="#ef2800"></path><path d="M440 300L448.5 287.5C457 275 474 250 472 225C470 200 449 175 445.2 150C441.3 125 454.7 100 455.7 75C456.7 50 445.3 25 439.7 12.5L434 0L650 0L650 12.5C650 25 650 50 650 75C650 100 650 125 650 150C650 175 650 200 650 225C650 250 650 275 650 287.5L650 300Z" fill="#d22301"></path><path d="M587 300L577.2 287.5C567.3 275 547.7 250 547.3 225C547 200 566 175 558.2 150C550.3 125 515.7 100 510.7 75C505.7 50 530.3 25 542.7 12.5L555 0L650 0L650 12.5C650 25 650 50 650 75C650 100 650 125 650 150C650 175 650 200 650 225C650 250 650 275 650 287.5L650 300Z" fill="#b51e01"></path></svg> -->
+        
+        <svg id="visual" viewBox="0 0 592 300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><path d="M317 300L328.5 291.7C340 283.3 363 266.7 374.3 250C385.7 233.3 385.3 216.7 382.3 200C379.3 183.3 373.7 166.7 363 150C352.3 133.3 336.7 116.7 344.8 100C353 83.3 385 66.7 402 50C419 33.3 421 16.7 422 8.3L423 0L592 0L592 8.3C592 16.7 592 33.3 592 50C592 66.7 592 83.3 592 100C592 116.7 592 133.3 592 150C592 166.7 592 183.3 592 200C592 216.7 592 233.3 592 250C592 266.7 592 283.3 592 291.7L592 300Z" fill="#f12700"></path><path d="M440 300L437.5 291.7C435 283.3 430 266.7 424.5 250C419 233.3 413 216.7 423.3 200C433.7 183.3 460.3 166.7 456.3 150C452.3 133.3 417.7 116.7 412.3 100C407 83.3 431 66.7 431.2 50C431.3 33.3 407.7 16.7 395.8 8.3L384 0L592 0L592 8.3C592 16.7 592 33.3 592 50C592 66.7 592 83.3 592 100C592 116.7 592 133.3 592 150C592 166.7 592 183.3 592 200C592 216.7 592 233.3 592 250C592 266.7 592 283.3 592 291.7L592 300Z" fill="#d32301"></path><path d="M531 300L534.3 291.7C537.7 283.3 544.3 266.7 543.5 250C542.7 233.3 534.3 216.7 523.3 200C512.3 183.3 498.7 166.7 490.7 150C482.7 133.3 480.3 116.7 477 100C473.7 83.3 469.3 66.7 469.7 50C470 33.3 475 16.7 477.5 8.3L480 0L592 0L592 8.3C592 16.7 592 33.3 592 50C592 66.7 592 83.3 592 100C592 116.7 592 133.3 592 150C592 166.7 592 183.3 592 200C592 216.7 592 233.3 592 250C592 266.7 592 283.3 592 291.7L592 300Z" fill="#b51e01"></path></svg>
+
+        <section class="fav" id="fav">
+            <div class="fav-img">
+                <a href="https://www.vecteezy.com/free-vector/background">
+                    <img src="images/favorites-pizza.png" alt="favorites">
+                </a>
+            </div>
+            <div class="fav-text">
+                <span>Favorites</span>
+                <h2>Click on the button <br> to check out your <br> favorite creations on the navbar!</h2>
+                <a href="#favorites-icon" class="btn">Favorites</a>
+            </div>
+        </section>
+
+        <section class="menu" id="menu">
+            <div class="heading">
+                <span>Chef's Speciality</span>
+                <h2>Fresh taste and great price</h2>    
+            </div>
+
+            <div class="menu-container">
+                <div class="box">
+                    <form action="" method="post">
+                        <div class="box1">
+                            <div class="box-img">
+                                <img src="images/pepperoni-pizza.png" alt="" class="product-img">
+                                <h2 class="product-title">Pepperoni Pizza</h2>
+                                <h3>Large, Classic Crust, Mozzarella, <br> Tomato Sauce, and Double <br> Pepperoni</h3>
+                                <span class="price">$20.00</span>
+                                <p></p>
+                                <!-- <input type="button" title="submit" class="cart-btn" value="Add To Cart"> -->
+                                <i class='bx bx1 bx-cart-alt add-cart'></i>
+                                <i class='bx bx-1 bx-heart add-cart2'></i>
+                            </div>
+    
+                            <div class="box-img">
+                                <img src="images/bbq-pizza.png" alt="" class="product-img">
+                                <h2 class="product-title">BBQ Pizza</h2>
+                                <h3>Large, Classic Crust, Mozzarella, <br> BBQ Sauce, Tomatoes, Mushrooms, <br> and Olives</h3>
+                                <span class="price">$17.00</span>
+                                <p></p>
+                                <!-- <input type="button" title="submit" class="cart-btn" value="Add To Cart"> -->
+                                <i class='bx bx2 bx-cart-alt add-cart'></i>
+                                <i class='bx bx-2 bx-heart add-cart2'></i>
+                            </div>
+                        </div>
+                        <div class="box2">    
+                            <div class="box-img">
+                                <img src="images/pesto-veggie-pizza.png" alt="" class="product-img">
+                                <h2 class="product-title">Pesto Veggie Pizza</h2>
+                                <h3>Large, Classic Crust, Mozzarella, <br> Basil Pesto Sauce, Broccoli, <br> Olives, Onions, Tomatoes, <br> and Peppers</h3>
+                                <span class="price">$18.00</span>
+                                <p></p>
+                                <!-- <input type="button" title="submit" class="cart-btn" value="Add To Cart"> -->
+                                    
+                                    <!-- <input type="submit" name="submit" class="checkbox add-cart"> -->
+                                    <!-- <i class='bx bx3 bx-cart-alt add-cart'></i> -->
+                                <!-- </button> -->
+                                <!-- <input type="submit"> -->
+                                <i class='bx bx3 bx-cart-alt add-cart'></i>
+                                <i class='bx bx-3 bx-heart add-cart2'></i>
+                            </div>
+    
+                            <div class="box-img">
+                                <img src="images/mexican-pizza.png" alt="" class="product-img">
+                                <h2 class="product-title">Mexican Pizza</h2>
+                                <h3>Large, Classic Crust, Mozzarella, <br> Tomato Sauce, Pepperoni, <br> Jalapenos, Onions, Peppers, <br> and Mushrooms</h3>
+                                <span class="price">$22.00</span>
+                                <p></p>
+                                <!-- <input type="button" title="submit" class="cart-btn" value="Add To Cart"> -->
+                                <i class='bx bx4 bx-cart-alt add-cart'></i>
+                                <i class='bx bx-4 bx-heart add-cart2'></i>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- <div class="box1">
+                        <div class="box-img">
+                            <img src="images/pepperoni-pizza.png" alt="" class="product-img">
+                            <h2 class="product-title">Pepperoni Pizza</h2>
+                            <h3>Large, Classic Crust, Mozzarella, <br> Tomato Sauce, and Double <br> Pepperoni</h3>
+                            <span class="price">$20.00</span>
+                            <p></p>
+                            <i class='bx bx1 bx-cart-alt add-cart'></i>
+                            <i class='bx bx-1 bx-heart add-cart2'></i>
+                        </div>
+
+                        <div class="box-img">
+                            <img src="images/bbq-pizza.png" alt="" class="product-img">
+                            <h2 class="product-title">BBQ Pizza</h2>
+                            <h3>Large, Classic Crust, Mozzarella, <br> BBQ Sauce, Tomatoes, Mushrooms, <br> and Olives</h3>
+                            <span class="price">$17.00</span>
+                            <p></p>
+                            <i class='bx bx2 bx-cart-alt add-cart'></i>
+                            <i class='bx bx-2 bx-heart add-cart2'></i>
+                        </div>
+                    </div>
+                    <div class="box2">    
+                        <div class="box-img">
+                            <img src="images/pesto-veggie-pizza.png" alt="" class="product-img">
+                            <h2 class="product-title">Pesto Veggie Pizza</h2>
+                            <h3>Large, Classic Crust, Mozzarella, <br> Basil Pesto Sauce, Broccoli, <br> Olives, Onions, Tomatoes, <br> and Peppers</h3>
+                            <span class="price">$18.00</span>
+                            <p></p>
+                            <i class='bx bx3 bx-cart-alt add-cart'></i>
+                            <i class='bx bx-3 bx-heart add-cart2'></i>
+                        </div>
+
+                        <div class="box-img">
+                            <img src="images/mexican-pizza.png" alt="" class="product-img">
+                            <h2 class="product-title">Mexican Pizza</h2>
+                            <h3>Large, Classic Crust, Mozzarella, <br> Tomato Sauce, Pepperoni, <br> Jalapenos, Onions, Peppers, <br> and Mushrooms</h3>
+                            <span class="price">$22.00</span>
+                            <p></p>
+                            <i class='bx bx4 bx-cart-alt add-cart'></i>
+                            <i class='bx bx-4 bx-heart add-cart2'></i>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="heading">
+                <span>Services</span>
+                <h2>We provide best quality food</h2>
+            </div>
+
+            <div class="service-container">
+                <div class="s-box">
+                    <img src ="images/s1.png" alt="s1">
+                    <h3>Order</h3>
+                    <p>Quick and easy ordering experience</p>
+                </div>
+
+                <div class="s-box">
+                    <img src ="images/s2.png" alt="s2">
+                    <h3>Shipping</h3>
+                    <p>Receive your order in under 30 minutes!</p>
+                </div>
+
+                <div class="s-box">
+                    <img src ="images/s3.png" alt="s3">
+                    <h3>Delivered</h3>
+                    <p>Enjoy your meal :)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Any concerns or bad <br> experience?</h2>
+            <a href="contact.html" class="btn">Let's talk</a>
+        </section>
+
+        <section id="contact">
+            <div class="footer">
+                <div class="main">
+                    <div class="col">
+                        <h2>Programmer's Pizzeria</h2>
+                        <p>We provide high quality food <br> and the tastiest pizzas <br> in town.</p>
+                    </div>
+
+                    <div class="col">
+                        <h4>Menu Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#">Favorites</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <h4>Follow Us</h4>
+                        <div class="social">
+                            <a href="#"><i class='bx bxl-facebook' ></i></a>
+                            <a href="#"><i class='bx bxl-instagram'></i></a>
+                            <a href="#"><i class='bx bxl-twitter'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script type="text/javascript" src="behavior.js"></script>
+
+    </body>
+    
+</html>

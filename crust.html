@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pizza Ordering Website</title>
+        <link rel="stylesheet" href="customize.css" />
+
+        <link rel="stylesheet"
+        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <header>
+            <a href="#" class="logo">Programmer's Pizzeria</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+                
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><button id="favorites-icon">Favorites</button></li>
+                <li><a href="contact.html">Contact Us</a></li>    
+            </ul>
+
+            <div class="header-action">
+                <div class="dropdown">
+                    <h2>Account <i class='bx bx-chevron-down' ></i></h2>
+                    <div class="dropdown-content">
+                    <a href="login-signup.html">Login/Signup</a>
+                    <a href="address.html">My Address</a>
+                    <a href="payment.html">Payment Methods</a>
+                    </div>
+                  </div>
+    
+                  <i class='bx bx-cart-alt' id="cart-icon"></i>
+            </div>
+
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+
+                <div class="cart-content">
+                    
+                </div>
+
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$0</div>
+                </div>
+
+                <button type="button" class="btn-buy">Buy Now</button>
+
+                <i class='bx bx-x' id="close-cart"></i>
+
+            </div>
+
+            <div class="favorites">
+                <h2 class="favorites-title">Favorites</h2>
+      
+                <div class="favorites-content">
+                    
+                </div>
+      
+                <i class='bx bx-x' id="close-cart2"></i>
+      
+            </div>
+
+        </header>
+
+        <script type="text/javascript" src="main.js"></script>
+
+        <div class="wrapper">
+            <div class="title">
+              Let's pick size and crust!
+            </div>
+
+            <div class="pizza-image">
+                <img src="images/custom-pizza.png" alt="Pizza" width="300">    
+            </div>
+
+            <div class="container contains"> 
+                <div class="size">
+                    <div class="title">
+                        Select a size:
+                    </div>
+    
+                    <div class="dropdown_size">
+                        <form action="" method="post">
+                            <input type="text" class="textBox" placeholder="Size" readonly>
+                            <div class="option">
+                                <div onclick="show('Small')">Small</div>
+                                <div onclick="show('Medium')">Medium</div>
+                                <div onclick="show('Large')">Large</div>
+                            </div>
+                        </form>
+                    </div>    
+                </div>
+
+                <!-- <div class="title">
+                    Select a size:
+                </div>
+
+                <div class="dropdown_size">
+                    <form action="" method="post">
+                        <input type="text" class="textBox" placeholder="Size" readonly>
+                        <div class="option">
+                            <div onclick="show('Small')">Small</div>
+                            <div onclick="show('Medium')">Medium</div>
+                            <div onclick="show('Large')">Large</div>
+                        </div>
+                    </form>
+                </div> -->
+
+                <!-- <label class="option_item">
+                    <input type="checkbox" value="Small" class="checkbox" id="Small">
+                    <div class="option_inner size">
+                        <div class="tickmark"></div>
+                            <p>
+                                <label for="Small" class="h3">Small</label>
+                            </p>
+                    </div>
+                </label>
+
+                <label class="option_item">
+                    <input type="checkbox" value="Medium" class="checkbox" id="Medium">
+                    <div class="option_inner size">
+                        <div class="tickmark"></div>
+                            <p>
+                                <label for="Medium" class="h3">Medium</label>
+                            </p>
+                    </div>
+                </label>
+
+                <label class="option_item">
+                    <input type="checkbox" value="Large" class="checkbox" id="Large">
+                    <div class="option_inner size">
+                        <div class="tickmark"></div>
+                            <p>
+                                <label for="Large" class="h3">Large</label>
+                            </p>
+                    </div>
+                </label> -->
+
+                <div class="crust">
+                    <div class="title">
+                        Select a crust:
+                    </div>
+    
+                    <div class="dropdown_crust">
+                        <form action="" method="post">
+                            <input type="text" class="textBox2" placeholder="Crust" readonly>
+                            <div class="option">
+                                <div onclick="show2('Thin')">Thin</div>
+                                <div onclick="show2('Classic')">Classic</div>
+                                <div onclick="show2('Thick')">Thick</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- <div class="title">
+                    Select a crust:
+                </div>
+
+                <div class="dropdown_crust">
+                    <form action="" method="post">
+                        <input type="text" class="textBox" placeholder="Crust" readonly>
+                        <div class="option">
+                            <div onclick="show('Thin')">Thin</div>
+                            <div onclick="show('Classic')">Classic</div>
+                            <div onclick="show('Thick')">Thick</div>
+                        </div>
+                    </form>
+                </div> -->
+
+                <!-- <label class="option_item">
+                    <input type="checkbox" value="Thin" class="checkbox" id="Thin">
+                    <div class="option_inner size">
+                        <div class="tickmark"></div>
+                            <p>
+                                <label for="Thin" class="h3">Thin</label>
+                            </p>
+                    </div>
+                </label>
+
+                <label class="option_item">
+                    <input type="checkbox" value="Classic" class="checkbox" id="Classic">
+                    <div class="option_inner size">
+                        <div class="tickmark"></div>
+                            <p>
+                                <label for="Classic" class="h3">Classic</label>
+                            </p>
+                    </div>
+                </label>
+
+                <label class="option_item">
+                    <input type="checkbox" value="Thick" class="checkbox" id="Thick">
+                    <div class="option_inner size">
+                        <div class="tickmark"></div>
+                            <p>
+                                <label for="Thick" class="h3">Thick</label>
+                            </p>
+                    </div>
+                </label> -->
+
+                <script>
+                    function show(anything){
+                        document.querySelector('.textBox').value = anything;
+                    }
+
+                    function show2(anything){
+                        document.querySelector('.textBox2').value = anything;
+                    }
+
+                    let dropdown = document.querySelector('.dropdown_size');
+                    dropdown.onclick = function(){
+                        dropdown.classList.toggle('active');
+                    }
+
+                    let dropdown2 = document.querySelector('.dropdown_crust');
+                    dropdown2.onclick = function(){
+                        dropdown2.classList.toggle('active');
+                    }
+                </script>
+
+              <!-- <div class="print-values">
+                <p id="valueList"></p>
+              </div> -->
+
+              <div class="buttons">
+                <a href="toppings.html" class="submit-btn">Back</a>
+                <a href="#submit" class="submit-btn btn" id="submit">Buy now</a>
+                <a href="#submit" class="submit-btn btn2">Add to Favorites</a>
+              </div>
+            </div>
+
+            <script type="text/javascript" src="alert.js"></script>
+            <script type="text/javascript" src="customize.js"></script>
+            <script type="text/javascript" src="behavior.js"></script>
+          
+        </div>
+    </body>
+
+</html>

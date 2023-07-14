@@ -1,3 +1,7 @@
+<p align="middle">
+<img src="https://user-images.githubusercontent.com/99130418/242739041-e9e8a733-ca23-4094-a277-59d442948142.png" width="100" height="100" alt="logo" />
+</p>p>
+
 # Programmer's Pizzeria
 
 The Programmer's Pizzeria is a web application that allows users to create and customize their own pizzas to suit their individual tastes and preferences.

@@ -6,6 +6,9 @@
 
 The Programmer's Pizzeria is a web application that allows users to create and customize their own pizzas to suit their individual tastes and preferences.
 
+https://github.com/geo-r-gio/Pizzeria-Project/assets/99597112/8717f400-b3a6-485c-b159-bebeed9366d9
+
+
 ## Features
 
 - **Customization**: Users can choose from a variety of toppings, sauces, and crust options to create their perfect pizza.
